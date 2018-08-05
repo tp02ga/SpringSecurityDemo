@@ -33,6 +33,8 @@ public class Authorities implements GrantedAuthority {
     this.authority = authority;
   }
 
+  // one-to-one (1-1), one-to-many (1-*), many-to-many (*-*)
+  
   @ManyToOne
   public User getUser() {
     return user;
