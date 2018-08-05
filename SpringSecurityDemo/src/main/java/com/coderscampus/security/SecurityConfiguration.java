@@ -28,10 +28,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     auth
       .userDetailsService(userDetailsService)
       .passwordEncoder(passwordEncoder);
-//      .inMemoryAuthentication()
-//      .withUser("trevor@craftycodr.com")
-//      .password("$2a$10$NLF0u1fOfWf73gQPV5l.wuvU8dh2cNtmqNznv59EIlG4oLBw5Ptx.")
-//      .roles("USER", "ADMIN");
   }
   
   @Override
