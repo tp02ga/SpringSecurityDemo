@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.coderscampus.domain.User;
 import com.coderscampus.repositories.UserRepository;
+import com.coderscampus.security.CustomSecurityUser;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
@@ -23,7 +24,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     if (user == null)
       throw new UsernameNotFoundException("Username and or password was incorrect.");
     
-    return user;
+    return new CustomSecurityUser(user);
   }
   
 }
